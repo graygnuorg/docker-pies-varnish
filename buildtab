@@ -1,0 +1,29 @@
+# This file provides definitions for building various versions of
+# GNU varnish container.
+#
+# Each definition begins with `build=NAME' and ends with a formfeed
+# character.  Any number of variable assignments can appear between
+# them.  A variable assignment starting with 'os ' is special.  It
+# defines a version of the OS (distro, actually) to use for that
+# particular build (in other words, it sets the OSVERSION variable).
+# A missing 'os' entry stands for 'latest'.
+# If the `build=NAME' line is immediately followed by the `platform=OSNAME',
+# that statement limits the scope of this definition to that particular
+# OS.
+#
+# Empty lines and comments are ignored.
+# Whitespace characters are allowed at either side of the = operator.
+#
+build=latest
+PIES_TAG=latest
+
+build=6.0
+platform=debian
+PIES_TAG=2.0
+VARNISH_TAG=stable
+
+build=6.0
+platform=alpine
+PIES_TAG=2.0
+VARNISH_TAG=6.0.7
+
