@@ -2,6 +2,7 @@
 : ${IMAGENAME:?}
 : ${PLATFORM:?}
 set -x
+: ${VARNISH_VERSION:=$VARNISH_TAG}
 arglist=$(sed -r -n \
 	      -e 's/^ARG[[:blank:]]([^=]+)((=)(.*))?[[:blank:]]*$/\1 \3/p' \
 	      $PLATFORM/Dockerfile | \

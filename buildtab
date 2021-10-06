@@ -15,11 +15,20 @@
 # Whitespace characters are allowed at either side of the = operator.
 #
 build=latest
+platform=alpine
+ADD_PACKAGES=pcre2-dev
+VIRT_PACKAGES=pcre2
 PIES_TAG=latest
+VARNISH_TAG=7.0.0
+
+build=latest
+platform=debian
+PIES_TAG=latest
+VARNISH_TAG=7.0.0
 
 build=6.0
 platform=debian
-PIES_TAG=2.0
+PIES_TAG=2.1
 VARNISH_TAG=stable
 
 build=6.0
