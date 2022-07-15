@@ -1,7 +1,7 @@
 ARG PIES_TAG
 FROM graygnuorg/pies:alpine-${PIES_TAG} as pies
-ARG ADD_PACKAGES
-ARG VIRT_PACKAGES
+ARG ADD_PACKAGES=
+ARG VIRT_PACKAGES=
 RUN apk add gcc musl-dev pcre readline libexecinfo ${ADD_PACKAGES} && \
     apk add --no-cache --virtual BUILD_DEPS alpine-sdk git autoconf automake linux-headers py3-pip py3-sphinx pcre-dev readline-dev libexecinfo-dev ${VIRT_PACKAGES}&& \
     pip3 install --no-cache-dir docutils
@@ -26,6 +26,6 @@ RUN cd /usr/local/bin && \
     done
 RUN apk del BUILD_DEPS; rm -rf /usr/src /var/lib/varnish/*
 EXPOSE 8073 80 8443
-WORKDIR /pies
+WORKDIR /etc/varnish
 
 		

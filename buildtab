@@ -28,11 +28,11 @@ VARNISH_TAG=7.0.0
 
 build=6.0
 platform=debian
-PIES_TAG=2.1
-VARNISH_TAG=stable
+PIES_TAG=2.8.4
+VARNISH_TAG=6.0.7
 
 build=6.0
 platform=alpine
-PIES_TAG=2.0
+PIES_TAG=2.8.4
 VARNISH_TAG=6.0.7
 
