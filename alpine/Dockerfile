@@ -27,5 +27,4 @@ RUN cd /usr/local/bin && \
 RUN apk del BUILD_DEPS; rm -rf /usr/src /var/lib/varnish/*
 EXPOSE 8073 80 8443
 WORKDIR /etc/varnish
-
-		
+USER root

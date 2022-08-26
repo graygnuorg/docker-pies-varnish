@@ -26,6 +26,18 @@ platform=debian
 PIES_TAG=latest
 VARNISH_TAG=7.0.0
 
+build=7.1.0
+platform=debian
+PIES_TAG=2.13
+VARNISH_TAG=7.1.0
+
+build=7.1.0
+platform=alpine
+ADD_PACKAGES=pcre2-dev
+VIRT_PACKAGES=pcre2
+PIES_TAG=2.13
+VARNISH_TAG=7.1.0
+
 build=6.0
 platform=debian
 PIES_TAG=2.8.4

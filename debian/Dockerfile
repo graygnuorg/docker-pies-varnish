@@ -8,3 +8,4 @@ ENV PATH="/pies/sbin:/pies/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 RUN rm -rf /var/lib/varnish/*
 ENTRYPOINT ["/pies/conf/rc"]
 EXPOSE 8073 80 8443
+USER root
